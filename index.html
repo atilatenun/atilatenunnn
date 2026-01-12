@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>for my kuttan</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url("1.jpeg");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .overlay {
+            height: 100vh;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            background: rgba(255,255,255,0.9);
+            padding: 40px 60px;
+            border-radius: 16px;
+            text-align: center;
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family:Arial; margin-top:150px;">
-
-    <h1>for my kuttan ❤️</h1>
-
-    <p>made this for you</p>
-    <p>hope you'll like it</p>
-
+<body>
+    <div class="overlay">
+        <div class="content">
+            <h1>for my kuttan ❤️</h1>
+            <p>made this for you</p>
+            <p>hope you'll like it</p>
+        </div>
+    </div>
 </body>
 </html>
+
