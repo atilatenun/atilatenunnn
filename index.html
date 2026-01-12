@@ -10,7 +10,15 @@
     </video>
 </div>
 
+<div class="music-player fade-in">
+    <button onclick="toggleMusic()" id="musicBtn">
+        ▶ play our song
+    </button>
 
+    <audio id="bgMusic">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+</div>
     <style>
         body {
             margin: 0;
@@ -82,8 +90,45 @@
         transform: translateY(0) translateX(0) rotate(0deg);
     }
 }
+.music-player {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.music-player button {
+    background: rgba(255, 182, 193, 0.9);
+    border: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #4a2c2a;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.music-player button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 160, 180, 1);
+}
 
     </style>
+<script>
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    function toggleMusic() {
+        if (music.paused) {
+            music.play();
+            btn.textContent = "❚❚ pause";
+        } else {
+            music.pause();
+            btn.textContent = "▶ play our song";
+        }
+    }
+</script>
+
 </head>
 <body>
 <div class="flowers">
@@ -135,6 +180,7 @@
 
     <img src="istill.jpeg" style="width:60%; max-width:500px; border-radius:16px; margin:15px 0;">
 </div>
+
 <img src="to.jpeg" style="width:70%; max-width:600px; display:block; margin:30px auto; border-radius:20px;">
 </body>
 </html>
